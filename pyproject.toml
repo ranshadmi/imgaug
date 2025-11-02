@@ -4,4 +4,4 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "imgaug"
-version = "1.0.1"
+version = "1.0.2"

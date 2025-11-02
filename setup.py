@@ -10,15 +10,15 @@ maps in a variety of different ways."""
 
 INSTALL_REQUIRES = [
     "six",
-    "numpy>=1.15",
+    "numpy",
     "scipy",
     "Pillow",
     "matplotlib",
-    "scikit-image>=0.14.2",
+    "scikit-image",
     "opencv-python-headless",
-    "imageio<=2.6.1; python_version<'3.5'",
-    "imageio; python_version>='3.5'",
-    "Shapely"
+    "imageio",
+    "Shapely",
+    "numba",
 ]
 
 ALT_INSTALL_REQUIRES = {
@@ -58,7 +58,7 @@ INSTALL_REQUIRES = get_install_requirements(INSTALL_REQUIRES, ALT_INSTALL_REQUIR
 
 setup(
     name="imgaug",
-    version="1.0.0",
+    version="1.0.2",
     author="Alexander Jung",
     author_email="kontakt@ajung.name",
     url="https://github.com/aleju/imgaug",
@@ -72,27 +72,7 @@ setup(
         "imgaug.checks": ["README.md"]
     },
     license="MIT",
-    description="Image augmentation library for deep neural networks",
+    description="Image augmentation library",
     long_description=long_description,
-    keywords=["augmentation", "image", "deep learning", "neural network", "CNN", "machine learning",
-              "computer vision", "overfitting"],
-    classifiers=[
-        "Development Status :: 4 - Beta",
-        "Intended Audience :: Science/Research",
-        "Intended Audience :: Developers",
-        "Intended Audience :: Information Technology",
-        "License :: OSI Approved :: MIT License",
-        "Natural Language :: English",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Topic :: Scientific/Engineering :: Artificial Intelligence",
-        "Topic :: Scientific/Engineering :: Image Recognition",
-        "Topic :: Software Development :: Libraries :: Python Modules"
-    ]
+    keywords=["augmentation", "image", "computer vision", "machine learning"],
 )
